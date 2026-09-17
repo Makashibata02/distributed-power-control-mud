@@ -1,0 +1,14 @@
+series,layer_count,layer_index,label,power
+two_user_threshold,3,1,E1,0.7411011265922482
+two_user_threshold,3,2,E2,1.015716566510398
+two_user_threshold,3,3,E12,1.2903320064285477
+exponential_layers,2,1,S=2,0.7411011265922482
+exponential_layers,2,2,S=2,1.2903320064285477
+exponential_layers,3,1,S=3,0.7411011265922482
+exponential_layers,3,2,S=3,0.9778887992211757
+exponential_layers,3,3,S=3,1.2903320064285477
+exponential_layers,4,1,S=4,0.7411011265922482
+exponential_layers,4,2,S=4,0.8915632095591367
+exponential_layers,4,3,S=4,1.0725728623493682
+exponential_layers,4,4,S=4,1.2903320064285477
+equivalent_ratio,3,0,E12/E1,1.741101126592248

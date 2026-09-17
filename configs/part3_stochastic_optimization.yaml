@@ -1,0 +1,48 @@
+system:
+  N: 8
+  S: 8
+  R: 0.25
+  G: 200.0
+  Pbar: 1.0
+  sigma2: 1.0
+  stop_on_failure: true
+  use_full_power: true
+  q_tx_min: 0.05
+  q_tx_max: 1.0
+  Pmax: null
+
+mc:
+  num_mc_baseline: 10000
+  num_mc_opt: 1000
+  num_mc_eval: 10000
+  seed: 20260520
+  seed_opt: 20260520
+  seed_eval: 21260523
+
+pso:
+  receiver: group_lmmse
+  num_particles: 30
+  num_iters: 50
+  w: 0.7
+  c1: 1.5
+  c2: 1.5
+  vmax: null
+  init_mode: mixed
+  warm_ratio: 0.4
+  warm_start_noise: 0.15
+  clip_z_q: 10.0
+  clip_z_beta: 15.0
+  clip_u: 10.0
+  pmax_mode: reject
+  objective_metric: mc_mean_T_over_G
+
+quick:
+  num_particles: 8
+  num_iters: 5
+  num_mc_opt: 100
+  num_mc_eval: 300
+  num_mc_baseline: 300
+
+outputs:
+  root: results
+  float_precision: 8

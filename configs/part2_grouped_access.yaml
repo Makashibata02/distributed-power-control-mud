@@ -1,0 +1,61 @@
+system:
+  N: 8
+  S: 8
+  R: 0.25
+  G: 200.0
+  Pbar: 1.0
+  sigma2: 1.0
+  stop_on_failure: true
+  use_full_power: true
+  q_tx_min: 0.05
+  q_tx_max: 1.0
+  Pmax: null
+
+receivers:
+  - global_od
+  - group_od
+  - group_mf
+  - group_lmmse
+
+transmission:
+  q_tx_grid: [0.2, 0.4, 0.6, 0.8, 1.0]
+
+structured_initialization:
+  beta_modes:
+    - uniform
+    - exp_increasing
+    - exp_decreasing
+    - gaussian
+    - poisson
+  power_modes:
+    - exponential
+    - linear
+  r_grid: [1.05, 1.1, 1.2, 1.4, 1.7, 2.0, 2.5, 3.0]
+
+random_initialization:
+  method: dirichlet
+  num_inits: 32
+  theta_values:
+    - 0.5
+    - 1.0
+    - 2.0
+  power_modes:
+    - random_increments
+
+local_search:
+  enabled: true
+  num_steps: 80
+  beta_scale: 0.10
+  power_scale: 0.10
+  q_scale: 0.20
+  seed: 20260520
+
+outputs:
+  root: results
+  float_precision: 8
+
+quick:
+  q_tx_grid: [0.5, 1.0]
+  r_grid: [1.2, 2.0]
+  random_inits: 3
+  local_steps: 5

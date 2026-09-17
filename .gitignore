@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.idea/
+.vscode/
+results/generated/
+src/dpc_mud/results/
+src/dpc_mud/results_quick/
+*.docx
+*.pptx
+*.pdf
+*.zip
+*.rar

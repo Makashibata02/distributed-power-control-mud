@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software or its published results, please cite it using the metadata below."
+title: "Distributed Power Control for Multiuser Detection"
+type: software
+version: 1.0.0
+date-released: 2026-09-17
+license: MIT
+authors:
+  - family-names: "尹"
+    given-names: "灵峙"
+    affiliation: "Fudan University"
+repository-code: "https://github.com/Makashibata02/distributed-power-control-mud"
+abstract: "Reproducible simulation code and selected results for distributed power control in random-access systems with multiuser detection."

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "distributed-power-control-mud"
+version = "1.0.0"
+description = "Reproducible distributed power-control experiments for multiuser detection"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [{ name = "尹灵峙" }]
+dependencies = [
+  "numpy==1.26.4",
+  "pandas==2.2.2",
+  "matplotlib==3.9.2",
+  "PyYAML==6.0.1",
+]
+
+[project.scripts]
+dpc-mud = "dpc_mud.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
