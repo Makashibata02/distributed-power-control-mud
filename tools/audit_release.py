@@ -43,7 +43,13 @@ def relative(root: Path, path: Path) -> str:
 def audit(root: Path) -> tuple[list[str], list[str], int, int]:
     findings: list[str] = []
     warnings: list[str] = []
-    files = [path for path in root.rglob("*") if path.is_file()]
+    files = [
+        path
+        for path in root.rglob("*")
+        if path.is_file()
+        and not relative(root, path).startswith("results/generated/")
+        and not relative(root, path).startswith(".git/")
+    ]
     total_bytes = sum(path.stat().st_size for path in files)
     for path in files:
         rel = relative(root, path)
